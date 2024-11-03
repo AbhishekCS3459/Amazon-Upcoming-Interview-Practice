@@ -22,6 +22,13 @@ Here’s a concise summary that captures the essential points for understanding 
 - **Word Search II** requires identifying multiple words from a list, necessitating a more efficient searching method due to potential complexity with many words.
 
 #### Why Use a Trie?
+  I have used trie so that while doing the dfs for each words in the board if any time
+   we find that the current path is not leading to any word present in words then we will stop 
+   or prune their like we start from o->a->t->h and this has endOfWord=true means that word is present in words
+   hence without traversing again through the words I came to know that the word is present in words
+   if any time like starting word =a is not present in trie so we wont start from a instead we will start from
+   e hence e->a->t --> endOfWord=true and hence it is marked true.
+        
 1. **Efficiency in Searching**:
    - The Trie structure allows us to store words in a way that common prefixes are shared, which reduces the memory footprint and speeds up the search process. This is particularly useful when the grid contains characters that can lead to multiple potential words.
    
